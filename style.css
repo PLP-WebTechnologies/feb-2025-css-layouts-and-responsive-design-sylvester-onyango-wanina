@@ -1,0 +1,88 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #333;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 10px;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar ul li a:hover {
+  color: #ddd;
+}
+
+/* Main Content Layout - Flexbox */
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.main {
+  flex: 2;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Responsive Design - Media Queries */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .main {
+    margin-right: 0;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar ul li a {
+    font-size: 16px;
+  }
+
+  .main, .sidebar {
+    padding: 15px;
+  }
+}
